@@ -1,5 +1,6 @@
 # keep-tray
-Google Keep in a system tray
+
+Google Keep in a system tray ✨
 
 ## Getting started
 
@@ -11,3 +12,5 @@ npm start
 ```
 
 I'll probably make executable releases at some point :100:
+
+Only tested on Windows 10 so far

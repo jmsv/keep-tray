@@ -1,5 +1,5 @@
 const electron = require('electron')
-const { app, BrowserWindow, ipcMain, Tray } = electron
+const { app, BrowserWindow, Tray } = electron
 const path = require('path')
 
 let tray = null

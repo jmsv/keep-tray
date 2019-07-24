@@ -3,17 +3,13 @@
   "version": "0.1.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "package": "electron-packager . KeepTray --all --out=out --icon=./keep.png --overwrite"
+    "start": "electron ."
   },
   "devDependencies": {
     "electron-packager": "^7.3.0",
     "electron-prebuilt": "^1.2.7",
-    "electron-prebuilt-compile": "^1.7.9"
-  },
-  "dependencies": {
+    "electron-prebuilt-compile": "^1.7.9",
     "auto-launch": "^5.0.5",
-    "electron-positioner": "^4.1.0",
-    "electron-reload": "^1.4.1"
+    "electron-positioner": "^4.1.0"
   }
 }
