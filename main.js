@@ -1,6 +1,13 @@
 const electron = require('electron')
-const { app, BrowserWindow, Tray } = electron
+const { app, BrowserWindow, Tray, Menu } = electron
 const path = require('path')
+
+// Reload on file changes
+require('electron-reload')(__dirname, {
+  electron: require(`${__dirname}/node_modules/electron`)
+})
+
+const url = 'https://keep.google.com'
 
 let tray = null
 let window = null
@@ -11,7 +18,7 @@ app.dock && app.dock.hide()
 // TODO: Make this configurable
 const config = {
   width: 500,
-  height: 800,
+  height: 700,
   position: 'bottomRight',
 }
 
@@ -26,7 +33,7 @@ const createWindow = () => {
     transparent: false,
   })
 
-  window.loadURL('https://keep.google.com')
+  window.loadURL(url)
 
   window.on('blur', () => {
     if (!window.webContents.isDevToolsOpened()) {
@@ -36,10 +43,19 @@ const createWindow = () => {
 }
 
 const createTray = () => {
-  tray = new Tray(path.join('keep.png'))
+  tray = new Tray(path.join(__dirname, 'keep.png'))
+
   tray.on('click', () => {
     window.isVisible() ? window.hide() : showWindow()
   })
+
+  tray.setContextMenu(
+    Menu.buildFromTemplate([
+      // TODO: Options menu item
+      // { label: 'Options', click: () => console.log('todo: open options') },
+      { label: 'Exit', click: () => window.close() },
+    ])
+  )
 }
 
 const showWindow = () => {
