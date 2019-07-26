@@ -3,9 +3,9 @@ const { app, BrowserWindow, Tray, Menu } = electron
 const path = require('path')
 
 // Reload on file changes
-require('electron-reload')(__dirname, {
-  electron: require(`${__dirname}/node_modules/electron`)
-})
+try {
+  require('electron-reloader')(module)
+} catch (_) {}
 
 const url = 'https://keep.google.com'
 
@@ -43,7 +43,7 @@ const createWindow = () => {
 }
 
 const createTray = () => {
-  tray = new Tray(path.join(__dirname, 'keep.png'))
+  tray = new Tray(path.join(__dirname, 'icon.png'))
 
   tray.on('click', () => {
     window.isVisible() ? window.hide() : showWindow()
