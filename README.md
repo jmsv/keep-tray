@@ -1,8 +1,20 @@
-# keep-tray
+<img align="left" width="110" src="https://github.com/jmsv/keep-tray/raw/master/keep.png">
 
-Google Keep in a system tray ✨
+<h1>keep-tray</h1>
 
-## Getting started
+💡 Google Keep in the system tray
+
+---
+
+## to do
+
+- [x] Tray exit button
+- [ ] Executable releases on GitHub
+- [ ] Config window for dimensions, screen position etc.
+- [ ] Run on startup option
+- [ ] Check/add support for Linux & MacOS
+
+## development
 
 ```sh
 git clone https://github.com/jmsv/keep-tray.git
@@ -11,6 +23,8 @@ npm install
 npm start
 ```
 
-I'll probably make executable releases at some point :100:
+To build for Windows:
 
-Only tested on Windows 10 so far
+```sh
+npm run dist
+```
