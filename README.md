@@ -13,6 +13,7 @@
 - [ ] Config window for dimensions, screen position etc.
 - [x] Run on startup
 - [ ] Check/add support for Linux & MacOS
+- [ ] [Auto update](https://www.electron.build/auto-update)
 
 ## development
 
