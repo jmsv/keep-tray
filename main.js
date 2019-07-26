@@ -1,6 +1,7 @@
 const electron = require('electron')
 const { app, BrowserWindow, Tray, Menu } = electron
 const path = require('path')
+const AutoLaunch = require('auto-launch')
 
 // Reload on file changes
 try {
@@ -20,6 +21,7 @@ const config = {
   width: 500,
   height: 700,
   position: 'bottomRight',
+  startup: true,
 }
 
 const createWindow = () => {
@@ -66,10 +68,27 @@ const showWindow = () => {
   window.show()
 }
 
+const setupAutoLaunch = () => {
+  let autoLaunch = new AutoLaunch({
+    name: 'keep-tray',
+    path: app.getPath('exe'),
+  })
+
+  autoLaunch.isEnabled().then(isEnabled => {
+    if (!isEnabled && config.startup) {
+      autoLaunch.enable()
+    } else if (isEnabled && !config.startup) {
+      autoLaunch.disable()
+    }
+  })
+}
+
 app.on('ready', () => {
   createTray()
   createWindow()
 
   var Positioner = require('electron-positioner')
   positioner = new Positioner(window)
+
+  setupAutoLaunch()
 })

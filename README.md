@@ -11,7 +11,7 @@
 - [x] Tray exit button
 - [ ] Executable releases on GitHub
 - [ ] Config window for dimensions, screen position etc.
-- [ ] Run on startup option
+- [x] Run on startup
 - [ ] Check/add support for Linux & MacOS
 
 ## development
