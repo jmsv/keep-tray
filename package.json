@@ -9,7 +9,7 @@
     "format": "prettier --write *.js",
     "postinstall": "electron-builder install-app-deps",
     "build": "electron-builder",
-    "dist": "electron-builder -p onTag"
+    "release": "electron-builder -p onTag"
   },
   "build": {
     "appId": "dev.jmsv.keeptray",

@@ -24,8 +24,8 @@ npm install
 npm start
 ```
 
-To build for Windows:
+Build:
 
 ```sh
-npm run dist
+npm run build
 ```
