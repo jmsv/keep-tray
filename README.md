@@ -1,4 +1,4 @@
-<img align="left" width="110" src="https://github.com/jmsv/keep-tray/raw/master/keep.png">
+<img align="left" width="110" src="https://github.com/jmsv/keep-tray/raw/master/icon.png">
 
 <h1>keep-tray</h1>
 
