@@ -1,8 +1,10 @@
-<img align="left" width="110" src="https://github.com/jmsv/keep-tray/raw/master/icon.png">
+<img align="left" width="150" src="https://github.com/jmsv/keep-tray/raw/master/icon.png">
 
 <h1>keep-tray</h1>
 
 💡 Google Keep in the system tray
+
+<br />
 
 ---
 
