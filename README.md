@@ -29,3 +29,9 @@ Build:
 ```sh
 npm run build
 ```
+
+## Changelog
+
+### `0.1.0`
+
+Initial version
