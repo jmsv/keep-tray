@@ -11,9 +11,6 @@
     "pack": "electron-builder --dir",
     "dist": "electron-builder"
   },
-  "build": {
-    "appId": "keep-tray"
-  },
   "devDependencies": {
     "electron": "^5.0.8",
     "electron-builder": "^21.1.5",
@@ -23,5 +20,13 @@
   "dependencies": {
     "auto-launch": "^5.0.5",
     "electron-positioner": "^4.1.0"
+  },
+  "build": {
+    "appId": "keep-tray"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmsv/keep-tray.git"
   }
 }
