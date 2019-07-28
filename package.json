@@ -8,8 +8,8 @@
     "start": "electron . --inspect",
     "format": "prettier --write *.js",
     "postinstall": "electron-builder install-app-deps",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "build": "electron-builder",
+    "release": "electron-builder -p onTag"
   },
   "devDependencies": {
     "electron": "^5.0.8",
@@ -22,7 +22,13 @@
     "electron-positioner": "^4.1.0"
   },
   "build": {
-    "appId": "keep-tray"
+    "appId": "dev.jmsv.keeptray",
+    "productName": "keep-tray",
+    "win": {
+      "publish": [
+        "github"
+      ]
+    }
   },
   "license": "MIT",
   "repository": {
